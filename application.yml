@@ -1,5 +1,10 @@
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health,info,env,refresh
+spring:
+  mvc:
+    throw-exception-if-no-handler-found: true
+  resources:
+    add-mappings: false
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web.filter.CommonsRequestLoggingFilter: DEBUG
